@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header__home {
+  padding: 20px;
+}
+.header__logo {
+  width: 145px;
+}
+.header__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+.header__nav a {
+  font-size: 12px;
+  font-weight: 500;
+}/*# sourceMappingURL=header.css.map */

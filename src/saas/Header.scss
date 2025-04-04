@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    &__home{
+        padding: 20px;
+    }
+    
+    &__logo {
+        width: 145px;
+        
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    
+    &__nav {
+        display: flex;
+        gap: 30px;
+        
+        a {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
