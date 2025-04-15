@@ -1,5 +1,9 @@
+import { useParams } from 'react-router-dom'
+
 function Logement() {
-  return <h1>Page Logement</h1>
+  const { id } = useParams()
+  
+  return <h1>Page Logement - {id}</h1>
 }
 
 export default Logement
