@@ -16,6 +16,11 @@
   height: auto;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 210px;
+  }
+}
 .header__nav {
   display: flex;
   gap: 25px;
@@ -30,4 +35,14 @@
 }
 .header__nav-link:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-link {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    gap: 50px;
+  }
 }/*# sourceMappingURL=header.css.map */
