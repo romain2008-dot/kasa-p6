@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import accueilImage from '../assets/accueil-image.webp'
 import logements from '../data/logements.json'
-import '../styles/Home.css'
+import '../saas/Home.scss'
 
 function Home() {
   return (
