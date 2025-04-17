@@ -1,6 +1,7 @@
 .collapse {
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   overflow: hidden;
+  max-width: 1023px;
   
   &__button {
     width: 100%;
