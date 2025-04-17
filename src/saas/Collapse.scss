@@ -1,5 +1,6 @@
 .collapse {
   margin-bottom: 20px;
+  overflow: hidden;
   
   &__button {
     width: 100%;
@@ -47,25 +48,25 @@
 
   &__content {
     background: #F6F6F6;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  &__inner {
     padding: 20px;
     font-size: 12px;
     line-height: 1.5;
-    border-radius: 0 0 5px 5px;
-    position: relative;
-    z-index: 0; // Pour passer sous le bouton
-    animation: slideDown 0.3s linear forwards;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    
+    &--visible {
+      transform: translateY(0);
+    }
     
     @media screen and (min-width: 768px) {
       font-size: 24px;
     }
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-70px); // Réduction de la distance
-  }
-  100% {
-    transform: translateY(0);
   }
 }
