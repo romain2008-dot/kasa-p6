@@ -1,0 +1,29 @@
+.host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__name {
+    color: #FF6060;
+    font-size: 12px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  &__picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}

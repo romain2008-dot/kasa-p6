@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react'
 import '../saas/Carrousel.scss'
 import arrow from '../assets/chevron-up.svg'
 
-function Slideshow({ pictures }) {
+function Carrousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  // Préchargement unique des images au montage
   useEffect(() => {
     pictures.forEach(src => {
       const img = new Image()
       img.src = src
     })
-  }, []) // Tableau de dépendances vide = exécution unique au montage
+  }, [])
   
   const goToPrevious = () => {
     setCurrentIndex(currentIndex === 0 ? pictures.length - 1 : currentIndex - 1)
@@ -23,29 +22,29 @@ function Slideshow({ pictures }) {
 
   if (pictures.length <= 1) {
     return (
-      <div className="slideshow">
-        <img src={pictures[0]} alt="Logement" className="slideshow__image" />
+      <div className="carrousel">
+        <img src={pictures[0]} alt="Logement" className="carrousel__image" />
       </div>
     )
   }
 
   return (
-    <div className="slideshow">
-      <img src={pictures[currentIndex]} alt="Logement" className="slideshow__image" />
+    <div className="carrousel">
+      <img src={pictures[currentIndex]} alt="Logement" className="carrousel__image" />
       
-      <button onClick={goToPrevious} className="slideshow__button slideshow__button--prev">
-        <img src={arrow} alt="Précédent" className="slideshow__arrow slideshow__arrow--prev" />
+      <button onClick={goToPrevious} className="carrousel__button carrousel__button--prev">
+        <img src={arrow} alt="Précédent" className="carrousel__arrow carrousel__arrow--prev" />
       </button>
       
-      <button onClick={goToNext} className="slideshow__button slideshow__button--next">
-        <img src={arrow} alt="Suivant" className="slideshow__arrow slideshow__arrow--next" />
+      <button onClick={goToNext} className="carrousel__button carrousel__button--next">
+        <img src={arrow} alt="Suivant" className="carrousel__arrow carrousel__arrow--next" />
       </button>
       
-      <div className="slideshow__counter">
+      <div className="carrousel__counter">
         {currentIndex + 1}/{pictures.length}
       </div>
     </div>
   )
 }
 
-export default Slideshow
+export default Carrousel
