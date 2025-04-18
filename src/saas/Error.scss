@@ -1,3 +1,5 @@
+@import 'variables';
+
 .error {
     display: flex;
     flex-direction: column;
@@ -8,39 +10,39 @@
     margin: 60px 0;
     
     &__title {
-        color: #FF6060;
+        color: $color-primary;
         font-size: 96px;
         font-weight: 700;
         margin: 0;
         
-        @media screen and (min-width: 768px) {
+        @include respond-to($breakpoint-mobile) {
             font-size: 288px;
         }
     }
     
     &__text {
-        color: #FF6060;
+        color: $color-primary;
         font-size: 18px;
         font-weight: 500;
         margin: 0;
         max-width: 260px;
         
-        @media screen and (min-width: 768px) {
+        @include respond-to($breakpoint-mobile) {
             font-size: 36px;
             max-width: none;
         }
     }
     
     &__link {
-        color: black;
+        color: $color-black;
         font-size: 14px;
         
-        @media screen and (min-width: 768px) {
+        @include respond-to($breakpoint-mobile) {
             font-size: 18px;
         }
         
         &:hover {
-            color: #FF6060;
+            color: $color-primary;
         }
     }
 }

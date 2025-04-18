@@ -1,12 +1,14 @@
+@import 'variables';
+
 .rating {
-  display: flex;
+  @extend %flex-center;
   gap: 5px;
 
   &__star {
     width: 15px;
     height: 15px;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       width: 24px;
       height: 24px;
     }

@@ -1,16 +1,17 @@
+@import 'variables';
+
 .host {
-  display: flex;
-  align-items: center;
+  @extend %flex-center;
   gap: 10px;
 
   &__name {
-    color: #FF6060;
+    color: $color-primary;
     font-size: 12px;
     text-align: right;
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       font-size: 18px;
     }
   }
@@ -21,7 +22,7 @@
     border-radius: 50%;
     object-fit: cover;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       width: 64px;
       height: 64px;
     }

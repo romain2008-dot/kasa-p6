@@ -1,0 +1,38 @@
+// Colors
+$color-primary: #FF6060;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-grey: #F6F6F6;
+
+// Breakpoints
+$breakpoint-mobile: 768px;
+
+// Mixins
+@mixin respond-to($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+// Placeholders
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+%reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include respond-to($breakpoint-mobile) {
+    padding: 0 100px;
+  }
+}

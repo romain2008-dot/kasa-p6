@@ -1,11 +1,11 @@
+@import 'variables';
+
 .logement {
-  margin: 0 auto;
-  gap: 0;
-  
+
   &__content {
     margin: 15px 0;
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -16,18 +16,18 @@
   &__primary {
     margin-bottom: 16px;
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       margin-bottom: 0;
     }
   }
   
   &__title {
-    color: #FF6060;
+    color: $color-primary;
     font-size: 18px;
     margin-bottom: 5px;
     font-weight: 500;
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       font-size: 36px;
     }
   }
@@ -37,7 +37,7 @@
     margin-bottom: 10px;
     font-weight: 500;
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       font-size: 18px;
     }
   }
@@ -53,8 +53,8 @@
     justify-content: space-between;
     align-items: center;
     
-    @media screen and (min-width: 768px) {
-      flex-direction: column;
+    @include respond-to($breakpoint-mobile) {
+      flex-direction: column-reverse;
       align-items: flex-end;
       gap: 20px;
     }
@@ -64,7 +64,7 @@
     display: grid;
     margin: 20px 0;
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       grid-template-columns: 1fr 1fr;
       gap: 76px;
     }
@@ -74,6 +74,5 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    color: #FF6060;
   }
 }

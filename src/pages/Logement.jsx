@@ -1,4 +1,5 @@
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
@@ -11,10 +12,19 @@ import '../saas/Logement.scss'
 
 function Logement() {
   const { id } = useParams()
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    const logement = logements.find(logement => logement.id === id)
+    if (!logement) {
+      navigate('/404')
+    }
+  }, [id, navigate])
+
   const logement = logements.find(logement => logement.id === id)
   
   if (!logement) {
-    return <Navigate to="/404" />
+    return null
   }
 
   return (

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .carrousel {
   position: relative;
   width: 100%;
@@ -6,7 +8,7 @@
   overflow: hidden;
   margin: 0 auto;
   
-  @media screen and (min-width: 768px) {
+  @include respond-to($breakpoint-mobile) {
     height: 415px;
   }
   
@@ -38,7 +40,7 @@
     width: 16px;
     filter: brightness(0) invert(1);
     
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       width: 46px;
     }
 
@@ -57,20 +59,12 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: $color-white;
     font-size: 18px;
     font-weight: 500;
 
-    @media screen and (min-width: 768px) {
+    @include respond-to($breakpoint-mobile) {
       display: block;
     }
-  }
-
-  &.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f6f6f6;
-    color: #FF6060;
   }
 }
