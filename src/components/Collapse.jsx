@@ -4,7 +4,7 @@ import chevron from '../assets/chevron-up.svg'
 
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
-  const [contentHeight, setContentHeight] = useState('0px')
+  const [contentHeight, setContentHeight] = useState(0)
   const contentRef = useRef(null)
   
   useEffect(() => {
@@ -27,7 +27,7 @@ function Collapse({ title, content }) {
       </button>
       <div 
         className="collapse__content"
-        style={{ height: isOpen ? contentHeight : '0px' }}
+        style={{ height: isOpen ? contentHeight : 0 }}
       >
         <div 
           ref={contentRef}
