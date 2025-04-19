@@ -1,7 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Carrousel from '../components/Carrousel'
 import Tag from '../components/Tag'
 import Host from '../components/Host'
@@ -29,7 +27,6 @@ function Logement() {
 
   return (
     <div>
-      <Header />
       <main className="logement">
         <Carrousel pictures={logement.pictures} />
         
@@ -64,7 +61,6 @@ function Logement() {
           />
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

@@ -1,5 +1,3 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Collapse from '../components/Collapse'
 import accueilImage from '../assets/propos-image.webp'
 
@@ -25,7 +23,6 @@ function About() {
 
   return (
     <div>
-      <Header />
       <main>
         <div className="home">
           <div className="home__banner">
@@ -38,7 +35,6 @@ function About() {
           ))}
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

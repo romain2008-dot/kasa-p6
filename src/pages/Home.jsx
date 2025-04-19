@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import accueilImage from '../assets/accueil-image.webp'
 import logements from '../data/logements.json'
 import '../saas/Home.scss'
@@ -9,7 +7,6 @@ function Home() {
   return (
     <div>
       <div className="header__home">
-        <Header />
         <main>
           <div className="home">
             <div className="home__banner">
@@ -34,7 +31,6 @@ function Home() {
           </div>
         </main>
       </div>
-      <Footer />
     </div>
   )
 }
