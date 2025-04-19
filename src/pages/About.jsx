@@ -1,5 +1,6 @@
 import Collapse from '../components/Collapse'
-import accueilImage from '../assets/propos-image.webp'
+import Banner from '../components/Banner'
+import aboutImage from '../assets/propos-image.webp'
 
 function About() {
   const aboutData = [
@@ -24,11 +25,7 @@ function About() {
   return (
     <div>
       <main>
-        <div className="home">
-          <div className="home__banner">
-            <img src={accueilImage} alt="bannière à propos" className="home__image" />
-          </div>
-        </div>
+        <Banner image={aboutImage} />
         <div className="collapse-container">
           {aboutData.map((item, index) => (
             <Collapse key={index} title={item.title} content={item.content} />
